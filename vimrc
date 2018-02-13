@@ -2,6 +2,9 @@ source $VIMRUNTIME\defaults.vim
 source $VIMRUNTIME\mswin.vim
 source $HOME\vimfiles\plugins\surround.vim
 
+"lets be popey!
+execute pathogen#infect()
+
 "set t_Co=256   " This is may or may not needed.
 set background=light
 colorscheme PaperColor
@@ -26,3 +29,9 @@ match OverLength /\%81v.\+/
 
 nnoremap <C-S-Up> ddkP
 nnoremap <C-S-Down> ddp
+nnoremap <C-S-N> :NERDTreeToggle<CR>
+
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=syntax
