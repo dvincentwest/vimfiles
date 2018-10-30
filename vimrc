@@ -1,6 +1,6 @@
-source $VIMRUNTIME\defaults.vim
-"source $VIMRUNTIME\mswin.vim
-source $HOME\vimfiles\plugins\surround.vim
+source $VIMRUNTIME/defaults.vim
+"source $VIMRUNTIME/mswin.vim
+source $HOME/.vim/plugins/surround.vim
 
 "lets be popey!
 execute pathogen#infect()
@@ -18,9 +18,9 @@ snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
 " Use CTRL-S for saving, also in Insert mode
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<C-O>:update<CR>
+noremap <C-S>       :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Just use the system clipboard
 set clipboard=unnamed
@@ -31,7 +31,11 @@ set clipboard=unnamed
 set background=light
 colorscheme PaperColor
 
-set guifont=Consolas:h11:cANSI
+if has('win32')
+    set guifont=Consolas:h11:cANSI
+else
+    set guifont=Monaco
+endif
 set autochdir
 set number
 
@@ -47,16 +51,19 @@ au bufread,bufnewfile *.md,*.rst setlocal textwidth=80
 
 " highlight the column when it goes over the text width
 highlight OverLength ctermbg=red ctermfg=white guibg=#CCCCCC
-match OverLength /\%81v.\+/
+match OverLength /\%81v.*/
 
 "move line up and down
 nnoremap <C-S-Up> ddkP  
 nnoremap <C-S-Down> ddp
 nnoremap <C-S-N> :NERDTreeToggle<CR>
 
+
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
 
-:cd C:\Coding\
+if has('win32')
+    :cd C:/Coding/
+endif
