@@ -1,6 +1,12 @@
+if has('win32') || has ('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+
 source $VIMRUNTIME/defaults.vim
 "source $VIMRUNTIME/mswin.vim
-source $HOME/.vim/plugins/surround.vim
+source $VIMHOME/plugins/surround.vim
 
 "lets be popey!
 execute pathogen#infect()
@@ -63,7 +69,3 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
-
-if has('win32')
-    :cd C:/Coding/
-endif
