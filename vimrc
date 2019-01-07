@@ -4,6 +4,8 @@ else
     let $VIMHOME = $HOME."/.vim"
 endif
 
+set termguicolors
+
 source $VIMRUNTIME/defaults.vim
 "source $VIMRUNTIME/mswin.vim
 source $VIMHOME/plugins/surround.vim
@@ -11,7 +13,7 @@ source $VIMHOME/plugins/surround.vim
 "lets be popey!
 execute pathogen#infect()
 
-set guioptions -=T  "hide the toolbar of buttons
+set guioptions-=T  "hide the toolbar of buttons
 
 """ MSWINDOW OPTIONS
 
@@ -34,13 +36,14 @@ set clipboard=unnamed
 """ END MSWINDOW OPTIONS
 
 "set t_Co=256   " This is may or may not needed.
-set background=light
-colorscheme PaperColor
+" set background=light
+" colorscheme PaperColor
+colorscheme afterglow
 
 if has('win32')
     set guifont=Consolas:h11:cANSI
 else
-    set guifont=Monaco
+    set guifont=Ubuntu\ Mono\ 12
 endif
 set autochdir
 set number
@@ -56,8 +59,8 @@ set expandtab
 au bufread,bufnewfile *.md,*.rst setlocal textwidth=80
 
 " highlight the column when it goes over the text width
-highlight OverLength ctermbg=red ctermfg=white guibg=#CCCCCC
-match OverLength /\%81v.*/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#CCCCCC
+" match OverLength /\%81v.*/
 
 "move line up and down
 nnoremap <C-S-Up> ddkP  
