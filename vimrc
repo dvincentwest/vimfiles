@@ -36,8 +36,6 @@ set clipboard=unnamed
 """ END MSWINDOW OPTIONS
 
 "set t_Co=256   " This is may or may not needed.
-" set background=light
-" colorscheme PaperColor
 colorscheme afterglow
 
 if has('win32')
@@ -72,3 +70,6 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
+
+nmap <S-F> :set syntax=fortran<CR>:let b:fortran_fixed_source=!b:fortran_fixed_source<CR>:set syntax=text<CR>:set syntax=fortran<CR>
+nmap <C-F> :filetype detect<CR>
