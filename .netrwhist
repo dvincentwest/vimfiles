@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='C:/Coding/Python/dataquick/doc/source/articles'
 let g:netrw_dirhist_2='C:/Coding/Python/dataquick/doc/source'
 let g:netrw_dirhist_3='C:/Coding/Python/dataquick/doc/source/articles'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='C:/Coding/Python/dataquick/doc/source'
 let g:netrw_dirhist_5='C:/Users/A3R7LZZ/My Documents/Notebooks'
 let g:netrw_dirhist_6='C:/Users/A3R7LZZ/My Documents/Notebooks/maccor'
 let g:netrw_dirhist_7='C:/Users/A3R7LZZ/My Documents/Notebooks/maccor/procedure_files'
+let g:netrw_dirhist_8='/home/vince/Coding/Scattering/rlb'

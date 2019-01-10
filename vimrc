@@ -64,12 +64,16 @@ au bufread,bufnewfile *.md,*.rst setlocal textwidth=80
 nnoremap <C-S-Up> ddkP  
 nnoremap <C-S-Down> ddp
 nnoremap <C-S-N> :NERDTreeToggle<CR>
-
+nnoremap <leader>lsd :ls<cr>:bd<space>
+nnoremap <leader><C-p> :CtrlPTag<CR>
+xnoremap p "0p
 
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
 
-nmap <S-F> :set syntax=fortran<CR>:let b:fortran_fixed_source=!b:fortran_fixed_source<CR>:set syntax=text<CR>:set syntax=fortran<CR>
-nmap <C-F> :filetype detect<CR>
+" nmap <S-F> :set syntax=fortran<CR>:let b:fortran_fixed_source=!b:fortran_fixed_source<CR>:set syntax=text<CR>:set syntax=fortran<CR>
+" nmap <C-F> :filetype detect<CR>
+
+command! -nargs=+ Grep execute 'silent grep! <args>' | copen
