@@ -7,24 +7,13 @@ endif
 set termguicolors
 
 source $VIMRUNTIME/defaults.vim
-"source $VIMRUNTIME/mswin.vim
 source $VIMHOME/plugins/surround.vim
 
-"lets be popey!
 execute pathogen#infect()
 
 set guioptions-=T  "hide the toolbar of buttons
 
 """ MSWINDOW OPTIONS
-
-" CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
-
 " Use CTRL-S for saving, also in Insert mode
 noremap <C-S>       :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
@@ -32,13 +21,12 @@ inoremap <C-S> <C-O>:update<CR>
 
 " Just use the system clipboard
 set clipboard=unnamed
-
 """ END MSWINDOW OPTIONS
 
 "set t_Co=256   " This is may or may not needed.
 colorscheme afterglow
 
-if has('win32')
+if has('win32') || has('win64')
     set guifont=Consolas:h11:cANSI
 else
     set guifont=Ubuntu\ Mono\ 12
@@ -56,17 +44,17 @@ set expandtab
 
 au bufread,bufnewfile *.md,*.rst setlocal textwidth=80
 
-" highlight the column when it goes over the text width
-" highlight OverLength ctermbg=red ctermfg=white guibg=#CCCCCC
-" match OverLength /\%81v.*/
-
 "move line up and down
 nnoremap <C-S-Up> ddkP  
 nnoremap <C-S-Down> ddp
-nnoremap <C-S-N> :NERDTreeToggle<CR>
 nnoremap <leader>lsd :ls<cr>:bd<space>
 nnoremap <leader><C-p> :CtrlPTag<CR>
 xnoremap p "0p
+
+nnoremap <leader>f :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 set foldenable
 set foldlevelstart=10
@@ -77,3 +65,7 @@ set foldmethod=syntax
 " nmap <C-F> :filetype detect<CR>
 
 command! -nargs=+ Grep execute 'silent grep! <args>' | copen
+
+
+" Setting up different filetypes
+autocmd Filetype fortran setlocal sts=2 ts=2 sw=2 expandtab
