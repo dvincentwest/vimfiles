@@ -30,7 +30,7 @@ colorscheme afterglow
 if has('win32') || has('win64')
     set guifont=Consolas:h11:cANSI
 else
-    set guifont=Ubuntu\ Mono\ 12
+    set guifont=Ubuntu\ Mono\ 11
 endif
 set autochdir
 set number
