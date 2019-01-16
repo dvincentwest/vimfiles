@@ -24,6 +24,7 @@ set clipboard=unnamed
 """ END MSWINDOW OPTIONS
 
 "set t_Co=256   " This is may or may not needed.
+set background=light
 colorscheme afterglow
 
 if has('win32') || has('win64')
@@ -69,3 +70,4 @@ command! -nargs=+ Grep execute 'silent grep! <args>' | copen
 
 " Setting up different filetypes
 autocmd Filetype fortran setlocal sts=2 ts=2 sw=2 expandtab
+nnoremap <leader>c i<CR><Esc>6i<Space><Esc>i$<Space>
