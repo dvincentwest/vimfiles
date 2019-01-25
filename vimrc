@@ -62,8 +62,8 @@ set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
 
-" nmap <S-F> :set syntax=fortran<CR>:let b:fortran_fixed_source=!b:fortran_fixed_source<CR>:set syntax=text<CR>:set syntax=fortran<CR>
-" nmap <C-F> :filetype detect<CR>
+nmap <S-F> :set syntax=fortran<CR>:let b:fortran_fixed_source=!b:fortran_fixed_source<CR>:set syntax=text<CR>:set syntax=fortran<CR>
+nmap <C-F> :filetype detect<CR>
 
 command! -nargs=+ Grep execute 'silent grep! <args>' | copen
 
