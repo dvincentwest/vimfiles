@@ -52,11 +52,6 @@ nnoremap <leader>lsd :ls<cr>:bd<space>
 nnoremap <leader><C-p> :CtrlPTag<CR>
 xnoremap p "0p
 
-nnoremap <leader>f :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
