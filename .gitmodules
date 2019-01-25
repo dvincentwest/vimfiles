@@ -1,18 +1,21 @@
 [submodule "bundle/vim-bufkill"]
-	path = bundle/vim-bufkill
+	path = pack/plugins/start/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
 [submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
+	path = pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
+	path = pack/plugins/start/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
+	path = pack/plugins/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
+	path = pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/plugins/start/vim-surround"]
+	path = pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround
