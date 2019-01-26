@@ -34,10 +34,10 @@ set expandtab
 nnoremap <C-S-Up> ddkP  
 nnoremap <C-S-Down> ddp
 
-" listing then deleting buffers
-nnoremap <leader>lsd :ls<cr>:bd<space>
-
+nnoremap <leader>lsd :ls<cr>:bd<space>  " listing then deleting buffers
 nnoremap <leader><C-p> :CtrlPTag<CR>
+
+set encoding=utf-8
 
 set foldenable
 set foldlevelstart=10
