@@ -7,6 +7,7 @@ endif
 source $VIMRUNTIME/defaults.vim
 
 set guioptions-=T  "hide the toolbar of buttons
+set guioptions-=L  "hide the toolbar of buttons
 
 """ MSWINDOW OPTIONS
 " Use CTRL-S for saving, also in Insert mode
@@ -18,9 +19,9 @@ inoremap <C-S> <C-O>:update<CR>
 colorscheme afterglow
 
 if has('win32') || has('win64')
-    set guifont=Consolas:h11:cANSI
+    set guifont=Consolas:h10:cANSI
 else
-    set guifont=Ubuntu\ Mono\ 11
+    set guifont=Ubuntu\ Mono\ 10
 endif
 set autochdir
 set number
@@ -43,6 +44,9 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=syntax
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 command! -nargs=+ Grep execute 'silent grep! <args>' | copen
 
